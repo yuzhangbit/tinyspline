@@ -9,5 +9,5 @@ jobs:
           name: Install Dependencies
           command: pushd ci && ./install_debs.sh && popd
       - run:
-          name: Print the Current Time
-          command: date
+          name: Compile Code
+          command: pushd ci && BUILD_DIR=build ./compile.sh && popd
