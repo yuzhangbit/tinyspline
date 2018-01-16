@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: debian:stretch
+    machine:
+      enabled: true
     steps:
       - checkout
       - run:
