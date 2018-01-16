@@ -1,12 +1,7 @@
 jobs:
   dependencies:
-    pre:
-      - pushd ci
-      - ./install_deps.sh
-      - popd
-
-  compile:
-    override:
-      - pushd ci
-      - BUILD_DIR=build ./compile.sh
-      - popd
+    steps:
+      - checkout
+      - run pushd ci
+      - run ./install_deps.sh
+      - run popd
