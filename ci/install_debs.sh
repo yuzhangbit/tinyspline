@@ -18,6 +18,23 @@ if [ "$TRAVIS_OS_NAME" == "linux" ]; then
 		-y;
 fi
 
+if [ "$CIRCLECI" == "yes" ]; then
+	sudo apt-get -qq update
+	sudo apt-get install --no-install-recommends \
+		cmake               \
+		doxygen             \
+		graphviz            \
+		python-dev          \
+		ruby-dev            \
+		php-dev             \
+		liblua5.3-dev       \
+		octave-pkg-dev      \
+		openjdk-8-jdk       \
+		r-base              \
+		r-cran-rcpp         \
+		-y;
+fi
+
 if [ "$TRAVIS_OS_NAME" == "osx" ]; then
 	brew tap homebrew/php
 	brew update
