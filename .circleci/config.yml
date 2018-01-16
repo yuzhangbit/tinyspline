@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: pushd ci && ./install_deps.sh && popd
+          command: pushd ci && ./install_debs.sh && popd
       - run:
           name: Print the Current Time
           command: date
