@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  dependencies:
+    pre:
+      - pushd ci
+      - ./install_deps.sh
+      - popd
+
+  compile:
+    override:
+      - pushd ci
+      - BUILD_DIR=build ./compile.sh
+      - popd
