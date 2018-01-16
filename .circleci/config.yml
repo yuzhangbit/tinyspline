@@ -1,7 +1,4 @@
-jobs:
-  dependencies:
-    steps:
-      - checkout
-      - run pushd ci
-      - run ./install_deps.sh
-      - run popd
+dependencies:
+  - run pushd ci
+  - run ./install_deps.sh
+  - run popd
