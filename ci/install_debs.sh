@@ -26,8 +26,6 @@ if [ "$CIRCLECI" == "true" ]; then
 		graphviz            \
 		python-dev          \
 		ruby-dev            \
-		php-dev             \
-		liblua5.3-dev       \
 		octave-pkg-dev      \
 		openjdk-8-jdk       \
 		r-base              \
