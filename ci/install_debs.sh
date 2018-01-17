@@ -18,7 +18,7 @@ if [ "$TRAVIS_OS_NAME" == "linux" ]; then
 		-y;
 fi
 
-if [ "$CIRCLECI" == "yes" ]; then
+if [ "$CIRCLECI" == "true" ]; then
 	sudo apt-get -qq update
 	sudo apt-get install --no-install-recommends \
 		cmake               \
