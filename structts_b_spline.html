@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="TinySpline_B.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TinySpline</div>
-   <div id="projectbrief">ANSI C library for NURBS, B-Splines, and Bézier curves with wrappers for C++11, C#, D, Java, Lua, Octave, PHP, Python, and Ruby</div>
+   <div id="projectbrief">NURBS Library for a Multitude of Programming Languages</div>
    <div id="projectnumber">v0.1.3</div>
   </td>
  </tr>
@@ -126,14 +126,14 @@ tsReal *&#160;</td><td class="memItemRight" valign="bottom"><b>knots</b></td></t
 </pre><p>... and so on. NURBS are represented using homogeneous coordinates. For instance, let's say we have a NURBS in 2D consisting of 11 control points where 'w_i' is the weight of the i'th control point. Then the corresponding control points are organized as follows: </p><pre class="fragment">[x_0, y_0, w_0, x_1, y_1, w_1, ..., x_10, y_10, w_10]
 </pre><p>Note: The fields 'ctrlp' and 'knots' share the same array (similar to the approach used in '<a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a>'). That is, the first elements of this array contain the control points of a spline whereas the last elements contain its knots. Accordingly, you should never free 'knots' explicitly. Using '<a class="el" href="tinyspline_8h.html#a1ae22ecf7c8865fc2eddeecfaa78c237">ts_bspline_free()</a>' to free dynamically allocated memory is to be preferred anyway. If 'ctrlp' and 'knots' do not share the same array, or at least a consistent block of data, functions provided by TinySpline my fail because values are copied block wise. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/msteinbeck/tinyspline/library/<a class="el" href="tinyspline_8h_source.html">tinyspline.h</a></li>
+<li>/home/travis/build/msteinbeck/tinyspline/src/<a class="el" href="tinyspline_8h_source.html">tinyspline.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Thu Jan 25 2018 12:43:49 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 07:28:16 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
