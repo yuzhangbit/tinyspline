@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake ..</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cmake --build .</div></div><!-- fragment --><p>You will find the resulting libraries, jars, etc. in <code>tinyspline/build/lib</code>.</p>
 <h4>Cross Compiling</h4>
 <p>In order to cross-compile the C and C++ library, use one of the provided toolchain files. Currently, toolchain files for MinGW, ARM, and AVR are available at the root directory of the source distribution (e.g. <code>Toolchain-arm.cmake</code>). Use the following command within your build directory to cross compile TinySpline to the desired platform:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake -DCMAKE_TOOLCHAIN_FILE=&lt;path to tinyspline&gt;/tools/toolchain/Toolchain-*.cmake ..</div></div><!-- fragment --><h4>Python 2 vs. Python 3</h4>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake -DCMAKE_TOOLCHAIN_FILE=&lt;path to tinyspline&gt;/res/toolchain/Toolchain-*.cmake ..</div></div><!-- fragment --><h4>Python 2 vs. Python 3</h4>
 <p>Swig needs to distinguish between Python 2 and Python 3 in order to generate source code that is compatible with the used environment. That is, Swig requires the parameter <code>-py</code> to generate Python 2 compatible code and <code>-py3</code> to generate Python 3 compatible code. Thus, the CMake file used to compile and package the libraries configures Swig according to the version of the Python instance that was found during initialization. On systems with multiple versions of Python installed, CMake chooses the more recent one (i.e. Python 3). If you want to use a specific version of Python, set the environment variable 'TINYSPLINE_PYTHON_VERSION' to '2' or '3'.</p>
 <p>The following example shows how to force CMake to use Python 2 rather than Python 3 on Debian-based systems:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;export TINYSPLINE_PYTHON_VERSION=2</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cmake ..</div></div><!-- fragment --><h4>Disabling Bindings</h4>
@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake -DTINYSPLINE_DISABLE_CSHARP=YES ..</div></div><!-- fragment --><h4>Install the C and C++ Libraries</h4>
 <p>The following command installs TinySpline to your system:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake --build . --target install</div></div><!-- fragment --><p>However, there are several binding-related files that CMake does not install with this command, as some languages use their own approach to install the files to your system. Python, for instance, uses Distutils/Setuptools to copy the resulting files to Python-specific installation directories that CMake is not aware of. Thus, TinySpline ships further, language-related distribution tools that will be explained in the following sections.</p>
-<h3>Install the bindings</h3>
+<h3>Install the Bindings</h3>
 <p>Depending on your configuration, binding-related distribution files are generated within the root of your build directory. That is, for instance, the file <code>setup.py</code> will be generated if support for Python has been detected. Currently, the following build tools are supported: Setuptools (Python), Maven (Java), and Luarocks (Lua).</p>
 <h3>Theoretical Backgrounds</h3>
 <p><a href="http://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/spline/B-spline/bspline-curve.html">[1]</a> is a very good starting point for B-Splines.</p>
@@ -165,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Fri Jan 26 2018 07:28:16 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 10:16:46 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
