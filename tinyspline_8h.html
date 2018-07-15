@@ -158,7 +158,8 @@ Enumerations</h2></td></tr>
 <b>TS_KNOTS_DECR</b> = -6, 
 <b>TS_NUM_KNOTS</b> = -7, 
 <br />
-&#160;&#160;<b>TS_UNDERIVABLE</b> = -8
+&#160;&#160;<b>TS_UNDERIVABLE</b> = -8, 
+<b>TS_LCTRLP_DIM_MISMATCH</b> = -10
 <br />
  }</td></tr>
 <tr class="separator:a565ff3761d90530714283629d1850e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +172,62 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:abaa2f455904401b6d848296e4954ace5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#abaa2f455904401b6d848296e4954ace5">ts_bspline_degree</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:abaa2f455904401b6d848296e4954ace5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a980c07744f3b8dce1952f515b95ea468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a980c07744f3b8dce1952f515b95ea468">ts_bspline_set_degree</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t deg)</td></tr>
+<tr class="separator:a980c07744f3b8dce1952f515b95ea468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94b75586c66cfadc612da2436bff00c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ae94b75586c66cfadc612da2436bff00c">ts_bspline_order</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:ae94b75586c66cfadc612da2436bff00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48eb201b7c4f213aa7d0e5b881ae4611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a48eb201b7c4f213aa7d0e5b881ae4611">ts_bspline_set_order</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t order)</td></tr>
+<tr class="separator:a48eb201b7c4f213aa7d0e5b881ae4611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018385ed866e0a8b840ebc8dc9857829"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a018385ed866e0a8b840ebc8dc9857829">ts_bspline_dimension</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:a018385ed866e0a8b840ebc8dc9857829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83791fb7f460386a91d323fd6b1ba3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a83791fb7f460386a91d323fd6b1ba3d4">ts_bspline_set_dimension</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t dim)</td></tr>
+<tr class="separator:a83791fb7f460386a91d323fd6b1ba3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad911018c9a8e822a3e0ee1a87d2160cc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad911018c9a8e822a3e0ee1a87d2160cc">ts_bspline_len_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:ad911018c9a8e822a3e0ee1a87d2160cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734beb5a0db5b2587c29ea7613f45667"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a734beb5a0db5b2587c29ea7613f45667">ts_bspline_num_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:a734beb5a0db5b2587c29ea7613f45667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f1dcb04924323277ac7f16791ac3c2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a02f1dcb04924323277ac7f16791ac3c2">ts_bspline_sof_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:a02f1dcb04924323277ac7f16791ac3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ba7d1d196645a197f3fbbad301200b"><td class="memItemLeft" align="right" valign="top">tsReal *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ab6ba7d1d196645a197f3fbbad301200b">ts_bspline_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:ab6ba7d1d196645a197f3fbbad301200b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63485fd35fa4da126e01d39ee2ccd5d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a63485fd35fa4da126e01d39ee2ccd5d9">ts_bspline_set_control_points</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *ctrlp)</td></tr>
+<tr class="separator:a63485fd35fa4da126e01d39ee2ccd5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951dfbdaecf6d57dee0664742271a846"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a951dfbdaecf6d57dee0664742271a846">ts_bspline_num_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:a951dfbdaecf6d57dee0664742271a846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ddf7f6167b1bdd5ea59b64f8b5c903"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ab9ddf7f6167b1bdd5ea59b64f8b5c903">ts_bspline_sof_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:ab9ddf7f6167b1bdd5ea59b64f8b5c903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89937b8c672153ccdea9d353b6d67588"><td class="memItemLeft" align="right" valign="top">tsReal *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a89937b8c672153ccdea9d353b6d67588">ts_bspline_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
+<tr class="separator:a89937b8c672153ccdea9d353b6d67588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab31beed180539eee9bec0913146ee44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aab31beed180539eee9bec0913146ee44">ts_bspline_set_knots</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *knots)</td></tr>
+<tr class="separator:aab31beed180539eee9bec0913146ee44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42d4bd8b55b31e303b7123c31794851"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ac42d4bd8b55b31e303b7123c31794851">ts_deboornet_knot</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:ac42d4bd8b55b31e303b7123c31794851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda9fdd8b56932457d6a210c3fb60aed"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aeda9fdd8b56932457d6a210c3fb60aed">ts_deboornet_index</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:aeda9fdd8b56932457d6a210c3fb60aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f156da683789062a75127fb65e07fb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a50f156da683789062a75127fb65e07fb">ts_deboornet_multiplicity</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:a50f156da683789062a75127fb65e07fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c7571d22dd1c75ec27370f617d1811"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a19c7571d22dd1c75ec27370f617d1811">ts_deboornet_num_insertions</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:a19c7571d22dd1c75ec27370f617d1811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08444ccebcf8e6d23bdeb35eab994735"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a08444ccebcf8e6d23bdeb35eab994735">ts_deboornet_dimension</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:a08444ccebcf8e6d23bdeb35eab994735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37fb590961666fbfc75072751356bcd9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a37fb590961666fbfc75072751356bcd9">ts_deboornet_len_points</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:a37fb590961666fbfc75072751356bcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a766db0443da506d81b225b463c44e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a03a766db0443da506d81b225b463c44e">ts_deboornet_num_points</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:a03a766db0443da506d81b225b463c44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdee94618c4acf743c2622e9ff8aebe9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#acdee94618c4acf743c2622e9ff8aebe9">ts_deboornet_sof_points</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:acdee94618c4acf743c2622e9ff8aebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401bcb7e50002dd63672f2b37b54edf0"><td class="memItemLeft" align="right" valign="top">tsReal *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a401bcb7e50002dd63672f2b37b54edf0">ts_deboornet_points</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:a401bcb7e50002dd63672f2b37b54edf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ba76e66721ce5cf8c63c7e295c1f2a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a43ba76e66721ce5cf8c63c7e295c1f2a">ts_deboornet_len_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:a43ba76e66721ce5cf8c63c7e295c1f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c21161e73f28bfda199f4efc0c9d2f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa6c21161e73f28bfda199f4efc0c9d2f">ts_deboornet_num_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:aa6c21161e73f28bfda199f4efc0c9d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bea39fc67549b06e27df5e86849511"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ab2bea39fc67549b06e27df5e86849511">ts_deboornet_sof_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:ab2bea39fc67549b06e27df5e86849511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad918fdeec68561472e1262d32306ea3c"><td class="memItemLeft" align="right" valign="top">tsReal *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad918fdeec68561472e1262d32306ea3c">ts_deboornet_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
+<tr class="separator:ad918fdeec68561472e1262d32306ea3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81921b5de014d0d57f2497f59cda468a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a81921b5de014d0d57f2497f59cda468a">ts_bspline_default</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
 <tr class="separator:a81921b5de014d0d57f2497f59cda468a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47bb44e7d8ad35c56d7b1b3f9b875fcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a47bb44e7d8ad35c56d7b1b3f9b875fcd">ts_bspline_new</a> (size_t n_ctrlp, size_t dim, size_t deg, <a class="el" href="tinyspline_8h.html#aab5b8110f44d56c12ee1bbf0c76a29a4">tsBSplineType</a> type, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
@@ -191,14 +248,10 @@ Functions</h2></td></tr>
 <tr class="separator:a56418fe544ac9fdfe25103ed7d69df3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95bd68ed4b4effcb893e50a79ea1a9f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a95bd68ed4b4effcb893e50a79ea1a9f4">ts_bspline_interpolate_cubic</a> (const tsReal *points, size_t n, size_t dim, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
 <tr class="separator:a95bd68ed4b4effcb893e50a79ea1a9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6942a2ceb8e46933ea035bae2177db95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a6942a2ceb8e46933ea035bae2177db95">ts_bspline_evaluate</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_deBoorNet_)</td></tr>
-<tr class="separator:a6942a2ceb8e46933ea035bae2177db95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b9dd8396fd83bf0aef88ac36b606f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a76b9dd8396fd83bf0aef88ac36b606f5">ts_bspline_eval</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_deBoorNet_)</td></tr>
+<tr class="separator:a76b9dd8396fd83bf0aef88ac36b606f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a5a92576e4848286f4b3dd69764403f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a0a5a92576e4848286f4b3dd69764403f">ts_bspline_derive</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_derivative_)</td></tr>
 <tr class="separator:a0a5a92576e4848286f4b3dd69764403f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2573b8c00454a0e97140c8429336a2b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a2573b8c00454a0e97140c8429336a2b9">ts_bspline_set_ctrlp</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *ctrlp, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_result_)</td></tr>
-<tr class="separator:a2573b8c00454a0e97140c8429336a2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b42b65d67a158aadfebb2ec0fe54f61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a5b42b65d67a158aadfebb2ec0fe54f61">ts_bspline_set_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *knots, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_result_)</td></tr>
-<tr class="separator:a5b42b65d67a158aadfebb2ec0fe54f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6199d07c43a843c4283d6c631ece80d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a6199d07c43a843c4283d6c631ece80d7">ts_bspline_fill_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, <a class="el" href="tinyspline_8h.html#aab5b8110f44d56c12ee1bbf0c76a29a4">tsBSplineType</a> type, tsReal min, tsReal max, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_result_)</td></tr>
 <tr class="separator:a6199d07c43a843c4283d6c631ece80d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c1c871b8fed7f04e630fd18691970f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a4c1c871b8fed7f04e630fd18691970f4">ts_bspline_insert_knot</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, size_t n, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_result_, size_t *_k_)</td></tr>
@@ -207,8 +260,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7f5b74412f8e277f02ca1924a7a40e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ef815b2cf46c808df814f8cb7b404b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad7ef815b2cf46c808df814f8cb7b404b">ts_bspline_split</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_split_, size_t *_k_)</td></tr>
 <tr class="separator:ad7ef815b2cf46c808df814f8cb7b404b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab238dc562fee3a4c6ab2d2be94aa5765"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ab238dc562fee3a4c6ab2d2be94aa5765">ts_bspline_buckle</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *original, tsReal b, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_buckled_)</td></tr>
-<tr class="separator:ab238dc562fee3a4c6ab2d2be94aa5765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81669bc634b4d870496f835ba530545f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a81669bc634b4d870496f835ba530545f">ts_bspline_buckle</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal b, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_buckled_)</td></tr>
+<tr class="separator:a81669bc634b4d870496f835ba530545f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6c51a67e74d453fc66ec940ab466967"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad6c51a67e74d453fc66ec940ab466967">ts_bspline_to_beziers</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_beziers_)</td></tr>
 <tr class="separator:ad6c51a67e74d453fc66ec940ab466967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9f0e1a305d27413b486a498ab1ca0e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa9f0e1a305d27413b486a498ab1ca0e6">ts_fequals</a> (tsReal x, tsReal y)</td></tr>
@@ -287,7 +340,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab238dc562fee3a4c6ab2d2be94aa5765"></a>
+<a class="anchor" id="a81669bc634b4d870496f835ba530545f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -295,7 +348,7 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_buckle </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>original</em>, </td>
+          <td class="paramname"><em>spline</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -334,6 +387,52 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
 TS_MALLOC If <code>spline</code> != <code>_buckled_</code> and allocating memory failed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab6ba7d1d196645a197f3fbbad301200b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tsReal* ts_bspline_control_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a deep copy of the control points of <code>spline</code>. </p><pre class="fragment">Why does this function return NULL instead of using TS_MALLOC in case
+of allocation issues?
+
+At the time of developing this interface different design aspects have
+been considered. Firstly, getter functions should return the requested
+value instead of writing the result into an output parameter. That way,
+one can directly assign the returned value to a (const) variable.
+Secondly, getter functions should return a deep copy of a value to make
+this library robust against inadvertent changes which may break the
+internal state a particular object.
+
+With this in mind, one will notice that these are conflicting demands
+as returning a deep copy of an array compels a function to allocate the
+necessary memory using malloc, which may fail due to lack of enough
+heap memory but must be handled by the user. One could argue that
+passing an output parameter of type tsError allows to handle this issue
+using TS_MALLOC, but, keep in mind that malloc is the only possibility
+for a getter function to fail. Thus, error handling using tsError
+(which, for getter functions, means to check for TS_MALLOC only) and
+using NULL checks is quite similar.
+
+Hence, for the sake of uniformity, memory allocating getter functions
+return NULL instead of using TS_MALLOC.
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose control points will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A deep copy of the control points of <code>spline</code> or NULL. </dd></dl>
 
 </div>
 </div>
@@ -400,6 +499,30 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="abaa2f455904401b6d848296e4954ace5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_bspline_degree </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the degree of <code>spline</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose degree will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The degree of <code>spline</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a0a5a92576e4848286f4b3dd69764403f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -449,12 +572,36 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a6942a2ceb8e46933ea035bae2177db95"></a>
+<a class="anchor" id="a018385ed866e0a8b840ebc8dc9857829"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_evaluate </td>
+          <td class="memname">size_t ts_bspline_dimension </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the dimension of <code>spline</code>. The dimension of a spline describes the number of components for each point in ts_bspline_get_control_points(spline). One-dimensional splines are possible, albeit their benefit might be questionable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose dimension will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The dimension of <code>spline</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a76b9dd8396fd83bf0aef88ac36b606f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_eval </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
           <td class="paramname"><em>spline</em>, </td>
@@ -706,6 +853,76 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a89937b8c672153ccdea9d353b6d67588"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tsReal* ts_bspline_knots </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a deep copy of the knots of <code>spline</code>. </p><pre class="fragment">Why does this function return NULL instead of using TS_MALLOC in case
+of allocation issues?
+
+At the time of developing this interface different design aspects have
+been considered. Firstly, getter functions should return the requested
+value instead of writing the result into an output parameter. That way,
+one can directly assign the returned value to a (const) variable.
+Secondly, getter functions should return a deep copy of a value to make
+this library robust against inadvertent changes which may break the
+internal state a particular object.
+
+With this in mind, one will notice that these are conflicting demands
+as returning a deep copy of an array compels a function to allocate the
+necessary memory using malloc, which may fail due to lack of enough
+heap memory but must be handled by the user. One could argue that
+passing an output parameter of type tsError allows to handle this issue
+using TS_MALLOC, but, keep in mind that malloc is the only possibility
+for a getter function to fail. Thus, error handling using tsError
+(which, for getter functions, means to check for TS_MALLOC only) and
+using NULL checks is quite similar.
+
+Hence, for the sake of uniformity, memory allocating getter functions
+return NULL instead of using TS_MALLOC.
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose knots will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A deep copy of the knots of <code>spline</code> or NULL. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad911018c9a8e822a3e0ee1a87d2160cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_bspline_len_control_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the length of the control point array of <code>spline</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline with its control point array whose length will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The length of the control point array of <code>spline</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="add802363d781d08f56f41c1482a0bccd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -806,6 +1023,78 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a734beb5a0db5b2587c29ea7613f45667"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_bspline_num_control_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of control points of <code>spline</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose number of control points will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of control points of <code>spline</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a951dfbdaecf6d57dee0664742271a846"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_bspline_num_knots </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of knots of <code>spline</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose number of knots will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of knots of <code>spline</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae94b75586c66cfadc612da2436bff00c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_bspline_order </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the order (degree + 1) of <code>spline</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose order will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The order of <code>spline</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a7f5b74412f8e277f02ca1924a7a40e67"></a>
 <div class="memitem">
 <div class="memproto">
@@ -855,27 +1144,21 @@ TS_MALLOC If <code>spline</code> != <code>_result_</code> and allocating memory 
 
 </div>
 </div>
-<a class="anchor" id="a2573b8c00454a0e97140c8429336a2b9"></a>
+<a class="anchor" id="a63485fd35fa4da126e01d39ee2ccd5d9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_set_ctrlp </td>
+          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_set_control_points </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
           <td class="paramname"><em>spline</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const tsReal *&#160;</td>
-          <td class="paramname"><em>ctrlp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_result_</em>&#160;</td>
+          <td class="paramname"><em>ctrlp</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -884,43 +1167,111 @@ TS_MALLOC If <code>spline</code> != <code>_result_</code> and allocating memory 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a deep copy of <code>spline</code> (only if <code>spline</code> != <code>_result_</code>) and copies the first <code>spline-&gt;n_ctrlp</code> * <code>spline-&gt;dim</code> values from <code>ctrlp</code> to <code>_result_-&gt;ctrlp</code> using memmove. The behaviour of this function is undefined, if the length of <code>ctrlp</code> is less than <code>spline-&gt;n_ctrlp</code> * <code>spline-&gt;dim</code>.</p>
-<p>On error, (and if <code>spline</code> != <code>_result_</code>) all values of <code>_result_</code> are set to 0/NULL.</p>
+<p>Sets the control points of <code>spline</code>. Creates a deep copy of <code>ctrlp</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline to deep copy (if <code>spline</code> != <code>_result_</code>) and whose control points are replaced with <code>ctrlp</code>. </td></tr>
-    <tr><td class="paramname">ctrlp</td><td>The control points to copy to <code>_result_-&gt;ctrlp</code>. </td></tr>
-    <tr><td class="paramname">_result_</td><td>The output parameter storing the result of this function. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose control points will be set. </td></tr>
+    <tr><td class="paramname">ctrlp</td><td>The values to deep copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS This function never fails. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a980c07744f3b8dce1952f515b95ea468"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_set_degree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>deg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the degree of <code>spline</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose degree will be set. </td></tr>
+    <tr><td class="paramname">deg</td><td>The degree to be set. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
-TS_MALLOC If <code>spline</code> != <code>_result_</code> and allocating memory failed. </dd></dl>
+TS_DEG_GE_NCTRLP If <code>degree</code> &gt;= ts_bspline_get_control_points(spline). </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a5b42b65d67a158aadfebb2ec0fe54f61"></a>
+<a class="anchor" id="a83791fb7f460386a91d323fd6b1ba3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_set_dimension </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the dimension of <code>spline</code>. The following conditions must be satisfied: </p><pre class="fragment">(1) dim &gt;= 1
+(2) len_control_points % dim == 0
+</pre><p>with <em>len_control_points</em> being the length of the control point array of <code>spline</code>. The dimension of a spline describes the number of components for each point in ts_bspline_get_control_points(spline). One-dimensional splines are possible, albeit their benefit might be questionable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose dimension will be set. </td></tr>
+    <tr><td class="paramname">dim</td><td>The dimension to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
+<dd>
+TS_DIM_ZERO If <code>dimension</code> == 0. </dd>
+<dd>
+TS_LCTRLP_DIM_MISMATCH If len_control_points % <code>dim</code> != 0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aab31beed180539eee9bec0913146ee44"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_set_knots </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
           <td class="paramname"><em>spline</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const tsReal *&#160;</td>
-          <td class="paramname"><em>knots</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_result_</em>&#160;</td>
+          <td class="paramname"><em>knots</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -929,19 +1280,104 @@ TS_MALLOC If <code>spline</code> != <code>_result_</code> and allocating memory 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a deep copy of <code>spline</code> (only if <code>spline</code> != <code>_result_</code>) and copies the the first <code>spline-&gt;n_knots</code> from <code>knots</code> to <code>_result_</code> using memmove. The behaviour of this function is undefined, if the length of <code>knots</code> is less than <code>spline-&gt;n_knots</code>.</p>
-<p>On error, (and if <code>spline</code> != <code>_result_</code>) all values of <code>_result_</code> are set to 0/NULL.</p>
+<p>Sets the knot of <code>spline</code>. Creates a deep copy of <code>knots</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline to deep copy (if <code>spline</code> != <code>_result_</code>) and whose knots are replaced with <code>knots</code>. </td></tr>
-    <tr><td class="paramname">knots</td><td>The knots to copy to <code>_result_-&gt;knots</code>. </td></tr>
-    <tr><td class="paramname">_result_</td><td>The output parameter storing the result of this function. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose knots will be set. </td></tr>
+    <tr><td class="paramname">knots</td><td>The values to deep copy. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
-TS_MALLOC If <code>spline</code> != <code>_result_</code> and allocating memory failed. </dd></dl>
+TS_KNOTS_DECR If the knot vector is decreasing. </dd>
+<dd>
+TS_MULTIPLICITY If there is a knot with multiplicity &gt; order </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a48eb201b7c4f213aa7d0e5b881ae4611"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_set_order </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the order (degree + 1) of <code>spline</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose order will be set. </td></tr>
+    <tr><td class="paramname">order</td><td>The order to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
+<dd>
+TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline) or if <code>order</code> == 0 ( due to the underflow resulting from: order - 1 =&gt; 0 - 1 =&gt; INT_MAX which will always be &gt;= ts_bspline_get_control_points(spline) ). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02f1dcb04924323277ac7f16791ac3c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_bspline_sof_control_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the size of the control point array of <code>spline</code>. This function may be useful when copying control points using memcpy or memmove.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline with its control point array whose size will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The size of the control point array of <code>spline</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9ddf7f6167b1bdd5ea59b64f8b5c903"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_bspline_sof_knots </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the size of the knot array of <code>spline</code>. This function may be useful when copying knots using memcpy or memmove.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline with its knot array whose size will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS The size of the knot array of <code>spline</code>. </dd></dl>
 
 </div>
 </div>
@@ -1140,6 +1576,30 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a08444ccebcf8e6d23bdeb35eab994735"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_dimension </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the dimension of <code>net</code>. The dimension of a net describes the number of components for each point in ts_bspline_get_points(spline). One-dimensional nets are possible, albeit their benefit might be questionable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net whose dimension will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The dimension of <code>net</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a56418fe544ac9fdfe25103ed7d69df3e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1161,6 +1621,102 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="aeda9fdd8b56932457d6a210c3fb60aed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the index [u_k, u_k+1) with u being the knot of <code>net</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net whose index will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index [u_k, u_k+1) with u being the knot of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac42d4bd8b55b31e303b7123c31794851"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tsReal ts_deboornet_knot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the knot (sometimes also called 'u' or 't') of <code>net</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net whose knot will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The knot of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a37fb590961666fbfc75072751356bcd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_len_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the length of the point array of <code>net</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net with its point array whose length will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The length of the point array of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43ba76e66721ce5cf8c63c7e295c1f2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_len_result </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the length of the result array of <code>net</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net with its result array whose length will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The length of the result array of <code>net</code>. </dd></dl>
 
 </div>
 </div>
@@ -1196,6 +1752,242 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a50f156da683789062a75127fb65e07fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_multiplicity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the multiplicity of the knot of <code>net</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net whose multiplicity will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The multiplicity of the knot of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a19c7571d22dd1c75ec27370f617d1811"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_num_insertions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of insertion that were necessary to evaluate the knot of <code>net</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net with its knot whose number of insertions will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of insertions that were necessary to evaluate the knot of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a03a766db0443da506d81b225b463c44e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_num_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of points of <code>net</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net whose number of points will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of points of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6c21161e73f28bfda199f4efc0c9d2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_num_result </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of points in the result array of <code>net</code> (1 &lt;= num_result &lt;= 2).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net with its result array whose number of points will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of points in the result array of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a401bcb7e50002dd63672f2b37b54edf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tsReal* ts_deboornet_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a deep copy of the points of <code>net</code>. </p><pre class="fragment">Why does this function return NULL instead of using TS_MALLOC in case
+of allocation issues?
+
+At the time of developing this interface different design aspects have
+been considered. Firstly, getter functions should return the requested
+value instead of writing the result into an output parameter. That way,
+one can directly assign the returned value to a (const) variable.
+Secondly, getter functions should return a deep copy of a value to make
+this library robust against inadvertent changes which may break the
+internal state a particular object.
+
+With this in mind, one will notice that these are conflicting demands
+as returning a deep copy of an array compels a function to allocate the
+necessary memory using malloc, which may fail due to lack of enough
+heap memory but must be handled by the user. One could argue that
+passing an output parameter of type tsError allows to handle this issue
+using TS_MALLOC, but, keep in mind that malloc is the only possibility
+for a getter function to fail. Thus, error handling using tsError
+(which, for getter functions, means to check for TS_MALLOC only) and
+using NULL checks is quite similar.
+
+Hence, for the sake of uniformity, memory allocating getter functions
+return NULL instead of using TS_MALLOC.
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net whose points will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A deep copy of the points of <code>net</code> or NULL. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad918fdeec68561472e1262d32306ea3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tsReal* ts_deboornet_result </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a deep copy of the result of <code>net</code>. </p><pre class="fragment">Why does this function return NULL instead of using TS_MALLOC in case
+of allocation issues?
+
+At the time of developing this interface different design aspects have
+been considered. Firstly, getter functions should return the requested
+value instead of writing the result into an output parameter. That way,
+one can directly assign the returned value to a (const) variable.
+Secondly, getter functions should return a deep copy of a value to make
+this library robust against inadvertent changes which may break the
+internal state a particular object.
+
+With this in mind, one will notice that these are conflicting demands
+as returning a deep copy of an array compels a function to allocate the
+necessary memory using malloc, which may fail due to lack of enough
+heap memory but must be handled by the user. One could argue that
+passing an output parameter of type tsError allows to handle this issue
+using TS_MALLOC, but, keep in mind that malloc is the only possibility
+for a getter function to fail. Thus, error handling using tsError
+(which, for getter functions, means to check for TS_MALLOC only) and
+using NULL checks is quite similar.
+
+Hence, for the sake of uniformity, memory allocating getter functions
+return NULL instead of using TS_MALLOC.
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net whose result will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A deep copy of the result of <code>net</code> or NULL. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acdee94618c4acf743c2622e9ff8aebe9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_sof_points </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the size of the point array of <code>net</code>. This function may be useful when copying points using memcpy or memmove.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net with its point array whose size will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The size of the point array of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab2bea39fc67549b06e27df5e86849511"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ts_deboornet_sof_result </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the size of the result array of <code>net</code>. This function may be useful when copying results using memcpy or memmove.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>The net with its result array whose size will be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS The size of the result array of <code>net</code>. </dd></dl>
 
 </div>
 </div>
@@ -1275,7 +2067,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Mon Jul 2 2018 12:32:42 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 15 2018 13:11:24 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.

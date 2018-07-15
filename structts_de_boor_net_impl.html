@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TinySpline: tsBSpline Struct Reference</title>
+<title>TinySpline: tsDeBoorNetImpl Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,49 +88,98 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structts_b_spline-members.html">List of all members</a>  </div>
+<a href="structts_de_boor_net_impl-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">tsBSpline Struct Reference</div>  </div>
+<div class="title">tsDeBoorNetImpl Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="tinyspline_8h_source.html">tinyspline.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1d53f626a8205931b738db3d3bf8a551"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structts_b_spline_impl.html">tsBSplineImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_b_spline.html#a1d53f626a8205931b738db3d3bf8a551">pImpl</a></td></tr>
-<tr class="separator:a1d53f626a8205931b738db3d3bf8a551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47eafa647a2bcd939f9bbbbe12dfb92f"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_de_boor_net_impl.html#a47eafa647a2bcd939f9bbbbe12dfb92f">u</a></td></tr>
+<tr class="separator:a47eafa647a2bcd939f9bbbbe12dfb92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efd97cc9a336b2d145a3c9cb2330bed"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_de_boor_net_impl.html#a9efd97cc9a336b2d145a3c9cb2330bed">k</a></td></tr>
+<tr class="separator:a9efd97cc9a336b2d145a3c9cb2330bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c153a02b5b8e0880de2233e3082d9d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_de_boor_net_impl.html#a91c153a02b5b8e0880de2233e3082d9d">s</a></td></tr>
+<tr class="separator:a91c153a02b5b8e0880de2233e3082d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00b8c10da71d1bca6540107b297bdd1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_de_boor_net_impl.html#ae00b8c10da71d1bca6540107b297bdd1">h</a></td></tr>
+<tr class="separator:ae00b8c10da71d1bca6540107b297bdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d4b59e9a6f2ada0c8b2ce1b91faa5e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_de_boor_net_impl.html#af7d4b59e9a6f2ada0c8b2ce1b91faa5e">dim</a></td></tr>
+<tr class="separator:af7d4b59e9a6f2ada0c8b2ce1b91faa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca41fa92ba7242765091e7542a44cd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ca41fa92ba7242765091e7542a44cd8"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>n_points</b></td></tr>
+<tr class="separator:a9ca41fa92ba7242765091e7542a44cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a B-Spline which may also be used for NURBS, Bezier curves, lines, and points. NURBS are represented by homogeneous coordinates where the last component of a control point is its weight. Bezier curves are B-Splines with 'num_control_points == order' and a clamped knot vector, making the curve passing through its first and last control point. If a Bezier curve consists of two control points only, we call them a line. Points, ultimately, are just very short lines with a single control point. Consequently, the degree of a point is zero.</p>
-<p>Two dimensional control points are organized as follows: </p><pre class="fragment">[x_0, y_0, x_1, y_1, ..., x_n-1, y_n-1]
-</pre><p>Tree dimensional control points are organized as follows: </p><pre class="fragment">[x_0, y_0, z_0, x_1, y_1, z_1, ..., x_n-1, y_n-1, z_n-1]
-</pre><p>... and so on. NURBS are represented by homogeneous coordinates. For instance, let's say we have a NURBS in 2D consisting of 11 control points where 'w_i' is the weight of the i'th control point. Then the corresponding control points are organized as follows: </p><pre class="fragment">[x_0, y_0, w_0, x_1, y_1, w_1, ..., x_10, y_10, w_10]</pre> </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for tsBSpline:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="structts_b_spline__coll__graph.png" border="0" usemap="#ts_b_spline_coll__map" alt="Collaboration graph"/></div>
-<map name="ts_b_spline_coll__map" id="ts_b_spline_coll__map">
-<area shape="rect" id="node2" href="structts_b_spline_impl.html" title="tsBSplineImpl" alt="" coords="5,5,115,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a1d53f626a8205931b738db3d3bf8a551"></a>
+<div class="textblock"><p>Stores the private data of a <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a>. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="af7d4b59e9a6f2ada0c8b2ce1b91faa5e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structts_b_spline_impl.html">tsBSplineImpl</a>* tsBSpline::pImpl</td>
+          <td class="memname">size_t tsDeBoorNetImpl::dim</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The actual implementation. </p>
+<p>Dimension of points. (2D =&gt; x, y) </p>
+
+</div>
+</div>
+<a class="anchor" id="ae00b8c10da71d1bca6540107b297bdd1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t tsDeBoorNetImpl::h</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of insertions required to obtain result. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9efd97cc9a336b2d145a3c9cb2330bed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t tsDeBoorNetImpl::k</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The index [u_k, u_k+1) </p>
+
+</div>
+</div>
+<a class="anchor" id="a91c153a02b5b8e0880de2233e3082d9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t tsDeBoorNetImpl::s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Multiplicity of u_k. </p>
+
+</div>
+</div>
+<a class="anchor" id="a47eafa647a2bcd939f9bbbbe12dfb92f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tsReal tsDeBoorNetImpl::u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The evaluated knot value. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/msteinbeck/tinyspline/src/<a class="el" href="tinyspline_8h_source.html">tinyspline.h</a></li>
+<li>/home/travis/build/msteinbeck/tinyspline/src/tinyspline.c</li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->

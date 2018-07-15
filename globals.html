@@ -76,6 +76,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_enum.html"><span>Enumerations</span></a></li>
     </ul>
   </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li class="current"><a href="#index_t"><span>t</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,12 +97,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented file members with links to the documentation:</div><ul>
+<div class="textblock">Here is a list of all documented file members with links to the documentation:</div>
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>ts_arr_fill()
 : <a class="el" href="tinyspline_8h.html#a997ea4b1b2b78d2e0c4d93d84adbc9dc">tinyspline.h</a>
 </li>
 <li>ts_bspline_buckle()
-: <a class="el" href="tinyspline_8h.html#ab238dc562fee3a4c6ab2d2be94aa5765">tinyspline.h</a>
+: <a class="el" href="tinyspline_8h.html#a81669bc634b4d870496f835ba530545f">tinyspline.h</a>
+</li>
+<li>ts_bspline_control_points()
+: <a class="el" href="tinyspline_8h.html#ab6ba7d1d196645a197f3fbbad301200b">tinyspline.h</a>
 </li>
 <li>ts_bspline_copy()
 : <a class="el" href="tinyspline_8h.html#a4c1d28e8f52a4f05e19a5ca2cfd404fc">tinyspline.h</a>
@@ -105,11 +115,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ts_bspline_default()
 : <a class="el" href="tinyspline_8h.html#a81921b5de014d0d57f2497f59cda468a">tinyspline.h</a>
 </li>
+<li>ts_bspline_degree()
+: <a class="el" href="tinyspline_8h.html#abaa2f455904401b6d848296e4954ace5">tinyspline.h</a>
+</li>
 <li>ts_bspline_derive()
 : <a class="el" href="tinyspline_8h.html#a0a5a92576e4848286f4b3dd69764403f">tinyspline.h</a>
 </li>
-<li>ts_bspline_evaluate()
-: <a class="el" href="tinyspline_8h.html#a6942a2ceb8e46933ea035bae2177db95">tinyspline.h</a>
+<li>ts_bspline_dimension()
+: <a class="el" href="tinyspline_8h.html#a018385ed866e0a8b840ebc8dc9857829">tinyspline.h</a>
+</li>
+<li>ts_bspline_eval()
+: <a class="el" href="tinyspline_8h.html#a76b9dd8396fd83bf0aef88ac36b606f5">tinyspline.h</a>
 </li>
 <li>ts_bspline_fill_knots()
 : <a class="el" href="tinyspline_8h.html#a6199d07c43a843c4283d6c631ece80d7">tinyspline.h</a>
@@ -123,20 +139,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ts_bspline_interpolate_cubic()
 : <a class="el" href="tinyspline_8h.html#a95bd68ed4b4effcb893e50a79ea1a9f4">tinyspline.h</a>
 </li>
+<li>ts_bspline_knots()
+: <a class="el" href="tinyspline_8h.html#a89937b8c672153ccdea9d353b6d67588">tinyspline.h</a>
+</li>
+<li>ts_bspline_len_control_points()
+: <a class="el" href="tinyspline_8h.html#ad911018c9a8e822a3e0ee1a87d2160cc">tinyspline.h</a>
+</li>
 <li>ts_bspline_move()
 : <a class="el" href="tinyspline_8h.html#add802363d781d08f56f41c1482a0bccd">tinyspline.h</a>
 </li>
 <li>ts_bspline_new()
 : <a class="el" href="tinyspline_8h.html#a47bb44e7d8ad35c56d7b1b3f9b875fcd">tinyspline.h</a>
 </li>
+<li>ts_bspline_num_control_points()
+: <a class="el" href="tinyspline_8h.html#a734beb5a0db5b2587c29ea7613f45667">tinyspline.h</a>
+</li>
+<li>ts_bspline_num_knots()
+: <a class="el" href="tinyspline_8h.html#a951dfbdaecf6d57dee0664742271a846">tinyspline.h</a>
+</li>
+<li>ts_bspline_order()
+: <a class="el" href="tinyspline_8h.html#ae94b75586c66cfadc612da2436bff00c">tinyspline.h</a>
+</li>
 <li>ts_bspline_resize()
 : <a class="el" href="tinyspline_8h.html#a7f5b74412f8e277f02ca1924a7a40e67">tinyspline.h</a>
 </li>
-<li>ts_bspline_set_ctrlp()
-: <a class="el" href="tinyspline_8h.html#a2573b8c00454a0e97140c8429336a2b9">tinyspline.h</a>
+<li>ts_bspline_set_control_points()
+: <a class="el" href="tinyspline_8h.html#a63485fd35fa4da126e01d39ee2ccd5d9">tinyspline.h</a>
+</li>
+<li>ts_bspline_set_degree()
+: <a class="el" href="tinyspline_8h.html#a980c07744f3b8dce1952f515b95ea468">tinyspline.h</a>
+</li>
+<li>ts_bspline_set_dimension()
+: <a class="el" href="tinyspline_8h.html#a83791fb7f460386a91d323fd6b1ba3d4">tinyspline.h</a>
 </li>
 <li>ts_bspline_set_knots()
-: <a class="el" href="tinyspline_8h.html#a5b42b65d67a158aadfebb2ec0fe54f61">tinyspline.h</a>
+: <a class="el" href="tinyspline_8h.html#aab31beed180539eee9bec0913146ee44">tinyspline.h</a>
+</li>
+<li>ts_bspline_set_order()
+: <a class="el" href="tinyspline_8h.html#a48eb201b7c4f213aa7d0e5b881ae4611">tinyspline.h</a>
+</li>
+<li>ts_bspline_sof_control_points()
+: <a class="el" href="tinyspline_8h.html#a02f1dcb04924323277ac7f16791ac3c2">tinyspline.h</a>
+</li>
+<li>ts_bspline_sof_knots()
+: <a class="el" href="tinyspline_8h.html#ab9ddf7f6167b1bdd5ea59b64f8b5c903">tinyspline.h</a>
 </li>
 <li>ts_bspline_split()
 : <a class="el" href="tinyspline_8h.html#ad7ef815b2cf46c808df814f8cb7b404b">tinyspline.h</a>
@@ -153,11 +199,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ts_deboornet_default()
 : <a class="el" href="tinyspline_8h.html#a1305fb75200937ca3f20953d4e16a6c4">tinyspline.h</a>
 </li>
+<li>ts_deboornet_dimension()
+: <a class="el" href="tinyspline_8h.html#a08444ccebcf8e6d23bdeb35eab994735">tinyspline.h</a>
+</li>
 <li>ts_deboornet_free()
 : <a class="el" href="tinyspline_8h.html#a56418fe544ac9fdfe25103ed7d69df3e">tinyspline.h</a>
 </li>
+<li>ts_deboornet_index()
+: <a class="el" href="tinyspline_8h.html#aeda9fdd8b56932457d6a210c3fb60aed">tinyspline.h</a>
+</li>
+<li>ts_deboornet_knot()
+: <a class="el" href="tinyspline_8h.html#ac42d4bd8b55b31e303b7123c31794851">tinyspline.h</a>
+</li>
+<li>ts_deboornet_len_points()
+: <a class="el" href="tinyspline_8h.html#a37fb590961666fbfc75072751356bcd9">tinyspline.h</a>
+</li>
+<li>ts_deboornet_len_result()
+: <a class="el" href="tinyspline_8h.html#a43ba76e66721ce5cf8c63c7e295c1f2a">tinyspline.h</a>
+</li>
 <li>ts_deboornet_move()
 : <a class="el" href="tinyspline_8h.html#a020c7a42e7e1baba7e696e8940e1f089">tinyspline.h</a>
+</li>
+<li>ts_deboornet_multiplicity()
+: <a class="el" href="tinyspline_8h.html#a50f156da683789062a75127fb65e07fb">tinyspline.h</a>
+</li>
+<li>ts_deboornet_num_insertions()
+: <a class="el" href="tinyspline_8h.html#a19c7571d22dd1c75ec27370f617d1811">tinyspline.h</a>
+</li>
+<li>ts_deboornet_num_points()
+: <a class="el" href="tinyspline_8h.html#a03a766db0443da506d81b225b463c44e">tinyspline.h</a>
+</li>
+<li>ts_deboornet_num_result()
+: <a class="el" href="tinyspline_8h.html#aa6c21161e73f28bfda199f4efc0c9d2f">tinyspline.h</a>
+</li>
+<li>ts_deboornet_points()
+: <a class="el" href="tinyspline_8h.html#a401bcb7e50002dd63672f2b37b54edf0">tinyspline.h</a>
+</li>
+<li>ts_deboornet_result()
+: <a class="el" href="tinyspline_8h.html#ad918fdeec68561472e1262d32306ea3c">tinyspline.h</a>
+</li>
+<li>ts_deboornet_sof_points()
+: <a class="el" href="tinyspline_8h.html#acdee94618c4acf743c2622e9ff8aebe9">tinyspline.h</a>
+</li>
+<li>ts_deboornet_sof_result()
+: <a class="el" href="tinyspline_8h.html#ab2bea39fc67549b06e27df5e86849511">tinyspline.h</a>
 </li>
 <li>ts_enum_str()
 : <a class="el" href="tinyspline_8h.html#a7da30fbf5cc8b891f4f2cbfcee7966d3">tinyspline.h</a>
@@ -180,7 +265,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Mon Jul 2 2018 12:32:42 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 15 2018 13:11:24 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.

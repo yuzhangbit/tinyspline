@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['tinyspline',['TinySpline',['../index.html',1,'']]],
+  ['tinyspline_2eh',['tinyspline.h',['../tinyspline_8h.html',1,'']]],
   ['ts_5farr_5ffill',['ts_arr_fill',['../tinyspline_8h.html#a997ea4b1b2b78d2e0c4d93d84adbc9dc',1,'tinyspline.c']]],
   ['ts_5fbspline_5fbuckle',['ts_bspline_buckle',['../tinyspline_8h.html#a81669bc634b4d870496f835ba530545f',1,'tinyspline.c']]],
   ['ts_5fbspline_5fcontrol_5fpoints',['ts_bspline_control_points',['../tinyspline_8h.html#ab6ba7d1d196645a197f3fbbad301200b',1,'tinyspline.c']]],
@@ -50,5 +52,11 @@ var searchData=
   ['ts_5fdeboornet_5fsof_5fresult',['ts_deboornet_sof_result',['../tinyspline_8h.html#ab2bea39fc67549b06e27df5e86849511',1,'tinyspline.c']]],
   ['ts_5fenum_5fstr',['ts_enum_str',['../tinyspline_8h.html#a7da30fbf5cc8b891f4f2cbfcee7966d3',1,'tinyspline.c']]],
   ['ts_5ffequals',['ts_fequals',['../tinyspline_8h.html#aa9f0e1a305d27413b486a498ab1ca0e6',1,'tinyspline.c']]],
-  ['ts_5fstr_5fenum',['ts_str_enum',['../tinyspline_8h.html#aa686ba3aafb41fa30251ec262cc503d1',1,'tinyspline.c']]]
+  ['ts_5fstr_5fenum',['ts_str_enum',['../tinyspline_8h.html#aa686ba3aafb41fa30251ec262cc503d1',1,'tinyspline.c']]],
+  ['tsbspline',['tsBSpline',['../structts_b_spline.html',1,'']]],
+  ['tsbsplineimpl',['tsBSplineImpl',['../structts_b_spline_impl.html',1,'']]],
+  ['tsbsplinetype',['tsBSplineType',['../tinyspline_8h.html#aab5b8110f44d56c12ee1bbf0c76a29a4',1,'tinyspline.h']]],
+  ['tsdeboornet',['tsDeBoorNet',['../structts_de_boor_net.html',1,'']]],
+  ['tsdeboornetimpl',['tsDeBoorNetImpl',['../structts_de_boor_net_impl.html',1,'']]],
+  ['tserror',['tsError',['../tinyspline_8h.html#a565ff3761d90530714283629d1850e9a',1,'tinyspline.h']]]
 ];

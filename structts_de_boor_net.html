@@ -67,6 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -97,62 +98,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a195eff98ece6e80625715d4b1d674899"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a195eff98ece6e80625715d4b1d674899"></a>
-tsReal&#160;</td><td class="memItemRight" valign="bottom"><b>u</b></td></tr>
-<tr class="separator:a195eff98ece6e80625715d4b1d674899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601eaa0ac8885fe7e01bb96f901002e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a601eaa0ac8885fe7e01bb96f901002e4"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>k</b></td></tr>
-<tr class="separator:a601eaa0ac8885fe7e01bb96f901002e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d47996893180df362e98f8c2a8cdec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17d47996893180df362e98f8c2a8cdec"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>s</b></td></tr>
-<tr class="separator:a17d47996893180df362e98f8c2a8cdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41993a3f2dddbb54dea4175f85851402"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41993a3f2dddbb54dea4175f85851402"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>h</b></td></tr>
-<tr class="separator:a41993a3f2dddbb54dea4175f85851402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a690f0240d1eaa0fc2e539442ed2f2e41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a690f0240d1eaa0fc2e539442ed2f2e41"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>dim</b></td></tr>
-<tr class="separator:a690f0240d1eaa0fc2e539442ed2f2e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf98c5eb8f08816fad9a42907b2e21f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf98c5eb8f08816fad9a42907b2e21f3"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>n_points</b></td></tr>
-<tr class="separator:acf98c5eb8f08816fad9a42907b2e21f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c757fa0190e7d38e40c3a12f7283dfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c757fa0190e7d38e40c3a12f7283dfd"></a>
-tsReal *&#160;</td><td class="memItemRight" valign="bottom"><b>points</b></td></tr>
-<tr class="separator:a8c757fa0190e7d38e40c3a12f7283dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6946e4522e03d750596450c44cb85a26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6946e4522e03d750596450c44cb85a26"></a>
-tsReal *&#160;</td><td class="memItemRight" valign="bottom"><b>result</b></td></tr>
-<tr class="separator:a6946e4522e03d750596450c44cb85a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a26191ef769dd63a13bd41f65d1f57a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structts_de_boor_net_impl.html">tsDeBoorNetImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_de_boor_net.html#a6a26191ef769dd63a13bd41f65d1f57a">pImpl</a></td></tr>
+<tr class="separator:a6a26191ef769dd63a13bd41f65d1f57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the output of De Boor's algorithm. De Boor's algorithm is used to evaluate a spline at given knot value 'u' by iteratively computing a net of intermediate values until the result is available: </p><pre class="fragment">https://en.wikipedia.org/wiki/De_Boor%27s_algorithm
 https://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/spline/de-Boor.html
-</pre><p>All points of the net are stored in 'points'. The resulting point of an evaluation is the last point in 'points' and, for the sake of convenience, may be accessed using 'result': </p><pre class="fragment">tsDeBoorNet net = ...    // evaluate an arbitrary spline and store
-                         // resulting net of points in 'net'
+</pre><p>All points of the net are stored in 'points'. The resulting point of an evaluation is the last point in 'points' and, for the sake of convenience, may be accessed with 'result': </p><pre class="fragment">tsDeBoorNet net = ...    // evaluate an arbitrary spline and store
+                         // the resulting net of points in 'net'
 
-net.result ...           // use 'result' to access resulting point
-</pre><p>Note: You should never free 'result' explicitly as it is just a convenient accessor for the last point in 'points'. Using '<a class="el" href="tinyspline_8h.html#a56418fe544ac9fdfe25103ed7d69df3e">ts_deboornet_free()</a>' to free dynamically allocated memory is to be preferred anyway.</p>
-<p>Two dimensional points are organized as follows: </p><pre class="fragment">[x_0, y_0, x_1, y_1, ..., x_n-1, y_n-1]
+ts_deboornet_result(...) // use 'result' to access the resulting point
+</pre><p>Two dimensional points are organized as follows: </p><pre class="fragment">[x_0, y_0, x_1, y_1, ..., x_n-1, y_n-1]
 </pre><p>Tree dimensional points are organized as follows: </p><pre class="fragment">[x_0, y_0, z_0, x_1, y_1, z_1, ..., x_n-1, y_n-1, z_n-1]
 </pre><p>... and so on.</p>
-<p>There is a special case in which the evaluation of a knot value 'u' returns two instead of one result. It occurs when the multiplicity of 'u' ( s(u) ) is equals to a spline's order indicating that the spline is discontinuous at 'u'. This is common practice for B-Splines (or NURBS) consisting of connected Bezier curves where the endpoint of curve 'c_i' is equals to the start point of curve 'c_i+1'. The end point of 'c_i' and the start point of 'c_i+1' may still be completely different though, yielding to a spline having a (real and visible) gap at 'u'. Consequently, De Boor's algorithm must return two results if 's(u) == order' in order to give you access to the desired points. In such case, 'points' stores only the two resulting points (there is no net to create) and 'result' points to the <em>first</em> point in 'points' ('points' and 'result' store the same pointer). Since having (real) gaps in splines is unusual, both points in 'points' are generally equals making it easy to handle this special case by accessing 'result' as already shown above for regular cases: </p><pre class="fragment">tsDeBoorNet net = ...    // evaluate a spline which is discontinuous at
-                         // at given knot value yielding to a net with
+<p>There is a special case in which the evaluation of a knot value 'u' returns two instead of one result. It occurs when the multiplicity of 'u' ( s(u) ) is equals to a spline's order, indicating that the spline is discontinuous at 'u'. This is common practice for B-Splines (or NURBS) consisting of connected Bezier curves where the endpoint of curve 'c_i' is equals to the start point of curve 'c_i+1'. The end point of 'c_i' and the start point of 'c_i+1' may still be completely different though, yielding to a spline having a (real and visible) gap at 'u'. Consequently, De Boor's algorithm must return two results if 's(u) == order' in order to give you access to the desired points. In such case, 'points' stores only the two resulting points (there is no net to create) and 'result' points to the <em>first</em> point in 'points' ('points' and 'result' store the same pointer). Since having (real) gaps in splines is unusual, both points in 'points' are generally equals making it easy to handle this special case by accessing 'result' as already shown above for regular cases: </p><pre class="fragment">tsDeBoorNet net = ...    // evaluate a spline which is discontinuous at
+                         // at given knot value, yielding to a net with
                          // two results
 
-net.result ...           // use 'result' to access resulting point
+ts_deboornet_result(...) // use 'result' to access the resulting point
 </pre><p>However, you can use both points if necessary: </p><pre class="fragment">tsDeBoorNet net = ...    // evaluate a spline which is discontinuous at
-                         // at given knot value yielding to a net with
+                         // at given knot value, yielding to a net with
                          // two results
 
-net.result[0] ...        // 'result[0]' stores the first component of
-                         // the first point
+ts_deboornet_result(...)[0] ...    // stores the first component of the
+                                   // first point
 
-net.result[net.dim]      // 'result[net.dim]' stores the first component
-                         // of the second point
-</pre><p>As if this wasn't complicated enough, there is an exception for our special case yielding to exactly one result (just like the regular case) even if 's(u) == order'. It occurs when 'u' is the lower or upper bound of a spline's domain. For instance, if 'b' is a spline with domain [0, 1] and is evaluated at 'u = 0' or 'u = 1' then 'result' is <em>always</em> a single point regardless of the multiplicity of 'u'. Hence, handling this exception is straightforward: </p><pre class="fragment">tsDeBoorNet net = ...    // evaluate a spline at lower or upper bound of
+ts_deboornet_result(...)[net.dim] // stores the first component of the
+                                  // second point
+</pre><p>As if this wasn't complicated enough, there is an exception for our special case, yielding to exactly one result (just like the regular case) even if 's(u) == order'. It occurs when 'u' is the lower or upper bound of a spline's domain. For instance, if 'b' is a spline with domain [0, 1] and is evaluated at 'u = 0' or 'u = 1' then 'result' is <em>always</em> a single point regardless of the multiplicity of 'u'. Hence, handling this exception is straightforward: </p><pre class="fragment">tsDeBoorNet net = ...    // evaluate a spline at lower or upper bound of
                          // its domain, for instance, 0 or 1
 
-net.result ...           // use 'result' to access resulting point
+ts_deboornet_result(...) // use 'result' to access the resulting point
 </pre><p>In summary, we have three different types of evaluation. 1) The regular case returning all points of the net we used to calculate the resulting point. 2) The special case returning exactly two points which is required for splines having (real) gaps. 3) The exception of 2) returning exactly one point even if 's(u) == order'. All in all this looks quite complex (and actually it is) but for most applications you don't need to bother with them. Just use 'result' to access your evaluation point. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for tsDeBoorNet:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="structts_de_boor_net__coll__graph.png" border="0" usemap="#ts_de_boor_net_coll__map" alt="Collaboration graph"/></div>
+<map name="ts_de_boor_net_coll__map" id="ts_de_boor_net_coll__map">
+<area shape="rect" id="node2" href="structts_de_boor_net_impl.html" title="tsDeBoorNetImpl" alt="" coords="5,5,137,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a6a26191ef769dd63a13bd41f65d1f57a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structts_de_boor_net_impl.html">tsDeBoorNetImpl</a>* tsDeBoorNet::pImpl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The actual implementation. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/travis/build/msteinbeck/tinyspline/src/<a class="el" href="tinyspline_8h_source.html">tinyspline.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -160,7 +162,7 @@ net.result ...           // use 'result' to access resulting point
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Mon Jul 2 2018 12:32:42 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 15 2018 13:11:24 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
