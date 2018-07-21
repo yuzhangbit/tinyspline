@@ -102,10 +102,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1d53f626a8205931b738db3d3bf8a551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a B-Spline which may also be used for NURBS, Bezier curves, lines, and points. NURBS are represented by homogeneous coordinates where the last component of a control point is its weight. Bezier curves are B-Splines with 'num_control_points == order' and a clamped knot vector, making the curve passing through its first and last control point. If a Bezier curve consists of two control points only, we call them a line. Points, ultimately, are just very short lines with a single control point. Consequently, the degree of a point is zero.</p>
-<p>Two dimensional control points are organized as follows: </p><pre class="fragment">[x_0, y_0, x_1, y_1, ..., x_n-1, y_n-1]
-</pre><p>Tree dimensional control points are organized as follows: </p><pre class="fragment">[x_0, y_0, z_0, x_1, y_1, z_1, ..., x_n-1, y_n-1, z_n-1]
-</pre><p>... and so on. NURBS are represented by homogeneous coordinates. For instance, let's say we have a NURBS in 2D consisting of 11 control points where 'w_i' is the weight of the i'th control point. Then the corresponding control points are organized as follows: </p><pre class="fragment">[x_0, y_0, w_0, x_1, y_1, w_1, ..., x_10, y_10, w_10]</pre> </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div class="textblock"><p>Represents a B-Spline which may also be used for NURBS, Bezier curves, lines, and points. NURBS are represented by homogeneous coordinates where the last component of a control point stores the weight of this control point. Bezier curves are B-Splines with 'num_control_points == order' and a clamped knot vector, therefore passing through their first and last control point (a property which does not necessarily apply to B-Splines and NURBS). If a Bezier curve consists of two control points only, we call it a line. Points, ultimately, are just very short lines consisting of a single control point.</p>
+<p>Two dimensional control points are stored as follows: </p><pre class="fragment">[x_0, y_0, x_1, y_1, ..., x_n-1, y_n-1]
+</pre><p>Tree dimensional control points are stored as follows: </p><pre class="fragment">[x_0, y_0, z_0, x_1, y_1, z_1, ..., x_n-1, y_n-1, z_n-1]
+</pre><p>... and so on. NURBS are represented by homogeneous coordinates. For example, let's say we have a NURBS in 2D consisting of 11 control points where 'w_i' is the weight of the i'th control point. Then, the corresponding control points are stored as follows: </p><pre class="fragment">[x_0*w_0, y_0*w_0, w_0, x_1*w_1, y_1*w_1, w_1, ..., x_10*w_10, y_10*w_10, w_10]</pre> </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for tsBSpline:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -137,7 +137,7 @@ Public Attributes</h2></td></tr>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Wed Jul 18 2018 20:13:11 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 21 2018 10:38:51 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.

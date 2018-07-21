@@ -285,7 +285,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Describes how the knot vector of a spline is organized. If you don't know what an opened or clamped spline is, have a look at: </p><pre class="fragment">www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/spline/B-spline/bspline-curve.html</pre> 
+<p>Describes the structure of the knot vector of a NURBS/B-Spline. For more details, see: </p><pre class="fragment">www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/spline/B-spline/bspline-curve.html</pre> 
 </div>
 </div>
 <a class="anchor" id="a565ff3761d90530714283629d1850e9a"></a>
@@ -297,12 +297,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Contains all error codes used by TinySpline. The following code snippet shows how to handle errors: </p><pre class="fragment"> tsError err = ...       // any function call here
- if (err &lt; 0) {          // or use err != TS_SUCCESS
+<p>Defines the error codes used by various functions to indicate different types of errors. The following code snippet shows how to handle errors: </p><pre class="fragment"> tsError err = ...                  // any function call here
+ if (err) {                         // or use err != TS_SUCCESS
      printf("we got an error!");
-
-     // you may want to reuse error codes
-     return err;
+     return err;                    // you may want to reuse error codes
  }</pre> 
 </div>
 </div>
@@ -416,7 +414,7 @@ TS_MALLOC If <code>spline</code> != <code>_buckled_</code> and allocating memory
 <p>Returns a deep copy of the control points of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose control points will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose control points are read. </td></tr>
     <tr><td class="paramname">ctrlp</td><td>The output array. </td></tr>
   </table>
   </dd>
@@ -506,7 +504,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the degree of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose degree will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose degree is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -579,7 +577,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the dimension of <code>spline</code>. The dimension of a spline describes the number of components for each point in ts_bspline_get_control_points(spline). One-dimensional splines are possible, albeit their benefit might be questionable.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose dimension will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose dimension is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -870,7 +868,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns a deep copy of the knots of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose knots will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose knots are read. </td></tr>
     <tr><td class="paramname">knots</td><td>The output array. </td></tr>
   </table>
   </dd>
@@ -897,7 +895,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the length of the control point array of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline with its control point array whose length will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline with its control point array whose length is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1021,7 +1019,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the number of control points of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose number of control points will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose number of control points is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1045,7 +1043,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the number of knots of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose number of knots will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose number of knots is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1069,7 +1067,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the order (degree + 1) of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose order will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose order is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1152,12 +1150,12 @@ TS_MALLOC If <code>spline</code> != <code>_result_</code> and allocating memory 
 <p>Sets the control points of <code>spline</code>. Creates a deep copy of <code>ctrlp</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose control points will be set. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose control points are set. </td></tr>
     <tr><td class="paramname">ctrlp</td><td>The values to deep copy. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS This function never fails. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd></dl>
 
 </div>
 </div>
@@ -1187,7 +1185,7 @@ TS_MALLOC If <code>spline</code> != <code>_result_</code> and allocating memory 
 <p>Sets the degree of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose degree will be set. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose degree is set. </td></tr>
     <tr><td class="paramname">deg</td><td>The degree to be set. </td></tr>
   </table>
   </dd>
@@ -1226,7 +1224,7 @@ TS_DEG_GE_NCTRLP If <code>degree</code> &gt;= ts_bspline_get_control_points(spli
 </pre><p>with <em>len_control_points</em> being the length of the control point array of <code>spline</code>. The dimension of a spline describes the number of components for each point in ts_bspline_get_control_points(spline). One-dimensional splines are possible, albeit their benefit might be questionable.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose dimension will be set. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose dimension is set. </td></tr>
     <tr><td class="paramname">dim</td><td>The dimension to be set. </td></tr>
   </table>
   </dd>
@@ -1262,10 +1260,10 @@ TS_LCTRLP_DIM_MISMATCH If len_control_points % <code>dim</code> != 0 </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the knot of <code>spline</code>. Creates a deep copy of <code>knots</code>.</p>
+<p>Sets the knots of <code>spline</code>. Creates a deep copy of <code>knots</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose knots will be set. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose knots are set. </td></tr>
     <tr><td class="paramname">knots</td><td>The values to deep copy. </td></tr>
   </table>
   </dd>
@@ -1304,14 +1302,14 @@ TS_MULTIPLICITY If there is a knot with multiplicity &gt; order </dd></dl>
 <p>Sets the order (degree + 1) of <code>spline</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline whose order will be set. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline whose order is set. </td></tr>
     <tr><td class="paramname">order</td><td>The order to be set. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
-TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline) or if <code>order</code> == 0 ( due to the underflow resulting from: order - 1 =&gt; 0 - 1 =&gt; INT_MAX which will always be &gt;= ts_bspline_get_control_points(spline) ). </dd></dl>
+TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline) or if <code>order</code> == 0 ( due to the underflow resulting from: order - 1 =&gt; 0 - 1 =&gt; INT_MAX which always is &gt;= ts_bspline_get_control_points(spline) ). </dd></dl>
 
 </div>
 </div>
@@ -1331,7 +1329,7 @@ TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline
 <p>Returns the size of the control point array of <code>spline</code>. This function may be useful when copying control points using memcpy or memmove.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline with its control point array whose size will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline with its control point array whose size is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1355,7 +1353,7 @@ TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline
 <p>Returns the size of the knot array of <code>spline</code>. This function may be useful when copying knots using memcpy or memmove.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spline</td><td>The spline with its knot array whose size will be read. </td></tr>
+    <tr><td class="paramname">spline</td><td>The spline with its knot array whose size is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1574,7 +1572,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the dimension of <code>net</code>. The dimension of a net describes the number of components for each point in ts_bspline_get_points(spline). One-dimensional nets are possible, albeit their benefit might be questionable.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net whose dimension will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net whose dimension is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1622,7 +1620,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the index [u_k, u_k+1) with u being the knot of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net whose index will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net whose index is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1646,7 +1644,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the knot (sometimes also called 'u' or 't') of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net whose knot will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net whose knot is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1670,7 +1668,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the length of the point array of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net with its point array whose length will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net with its point array whose length is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1694,7 +1692,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the length of the result array of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net with its result array whose length will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net with its result array whose length is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1753,7 +1751,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the multiplicity of the knot of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net whose multiplicity will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net whose multiplicity is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1777,7 +1775,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the number of insertion that were necessary to evaluate the knot of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net with its knot whose number of insertions will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net with its knot whose number of insertions is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1801,7 +1799,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the number of points of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net whose number of points will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net whose number of points is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1825,7 +1823,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the number of points in the result array of <code>net</code> (1 &lt;= num_result &lt;= 2).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net with its result array whose number of points will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net with its result array whose number of points is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1859,7 +1857,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns a deep copy of the points of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net whose points will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net whose points is read. </td></tr>
     <tr><td class="paramname">points</td><td>The output array. </td></tr>
   </table>
   </dd>
@@ -1896,7 +1894,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns a deep copy of the result of <code>net</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net whose result will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net whose result is read. </td></tr>
     <tr><td class="paramname">result</td><td>The output array. </td></tr>
   </table>
   </dd>
@@ -1923,7 +1921,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the size of the point array of <code>net</code>. This function may be useful when copying points using memcpy or memmove.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net with its point array whose size will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net with its point array whose size is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1947,7 +1945,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <p>Returns the size of the result array of <code>net</code>. This function may be useful when copying results using memcpy or memmove.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The net with its result array whose size will be read. </td></tr>
+    <tr><td class="paramname">net</td><td>The net with its result array whose size is read. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2031,7 +2029,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Wed Jul 18 2018 20:13:11 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 21 2018 10:38:51 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
