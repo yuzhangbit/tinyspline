@@ -1,0 +1,23 @@
+version: 2
+
+# Ignore branches testing third-party CI environments.
+general:
+  branches:
+    ignore:
+      - appveyor
+      - travisci
+      - gh-pages
+
+jobs:
+  build:
+    machine:
+      enabled: true
+      image: circleci/classic:edge
+    steps:
+      - checkout
+      - run:
+          name: Installing Dependencies
+          command: pushd tools/ci && ./install_deps.sh && popd
+      - run:
+          name: Compiling Code
+          command: pushd tools/ci && BUILD_DIR=build ./compile.sh && popd
