@@ -163,16 +163,16 @@ set(TINYSPLINE_PYTHON_VERSION "ANY" CACHE STRING "Force Python version. Supporte
 
 # TINYSPLINE_DISABLE_***
 option(TINYSPLINE_DISABLE_CXX "Deliberately disable the C++ interface." OFF)
-option(TINYSPLINE_DISABLE_CSHARP "Deliberately disable the C# interface." OFF)
-option(TINYSPLINE_DISABLE_D "Deliberately disable the D interface." OFF)
-option(TINYSPLINE_DISABLE_GOLANG "Deliberately disable the Go interface. (Not supported)" OFF)
-option(TINYSPLINE_DISABLE_JAVA "Deliberately disable the Java interface." OFF)
-option(TINYSPLINE_DISABLE_LUA "Deliberately disable the Lua interface." OFF)
-option(TINYSPLINE_DISABLE_OCTAVE "Deliberately disable the Octave interface." OFF)
-option(TINYSPLINE_DISABLE_PHP "Deliberately disable the PHP interface." OFF)
-option(TINYSPLINE_DISABLE_PYTHON "Deliberately disable the Python interface." OFF)
-option(TINYSPLINE_DISABLE_R "Deliberately disable the R interface." OFF)
-option(TINYSPLINE_DISABLE_RUBY "Deliberately disable the Ruby interface." OFF)
+option(TINYSPLINE_DISABLE_CSHARP "Deliberately disable the C# interface." ON)
+option(TINYSPLINE_DISABLE_D "Deliberately disable the D interface." ON)
+option(TINYSPLINE_DISABLE_GOLANG "Deliberately disable the Go interface. (Not supported)" ON)
+option(TINYSPLINE_DISABLE_JAVA "Deliberately disable the Java interface." ON)
+option(TINYSPLINE_DISABLE_LUA "Deliberately disable the Lua interface." ON)
+option(TINYSPLINE_DISABLE_OCTAVE "Deliberately disable the Octave interface." ON)
+option(TINYSPLINE_DISABLE_PHP "Deliberately disable the PHP interface." ON)
+option(TINYSPLINE_DISABLE_PYTHON "Deliberately disable the Python interface." ON)
+option(TINYSPLINE_DISABLE_R "Deliberately disable the R interface." ON)
+option(TINYSPLINE_DISABLE_RUBY "Deliberately disable the Ruby interface." ON)
 
 
 

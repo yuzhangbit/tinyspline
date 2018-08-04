@@ -91,5 +91,11 @@ public:
 private:
 	Utils() {}
 };
+/**
+ * This class
+ */
+class NaturalCubicSpline {
+
+};
 
 }

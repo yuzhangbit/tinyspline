@@ -9,6 +9,13 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 add_subdirectory(src)
 add_definitions("${TINYSPLINE_DEFINITIONS}")
 
+ENABLE_TESTING()
+
+## for gtest
+ADD_SUBDIRECTORY(deps/googletest EXCLUDE_FROM_ALL)
+INCLUDE_DIRECTORIES(${gtest_SOURCE_DIR}/include/ ${gtest_SOURCE_DIR})
+
+ADD_SUBDIRECTORY(tests)
 # add_subdirectory(examples)
 # add_subdirectory(test)
 # add_subdirectory(docs)
