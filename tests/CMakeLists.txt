@@ -3,10 +3,12 @@ PROJECT(tests)
 ADD_CUSTOM_TARGET(tests)
 
 ADD_EXECUTABLE(tinyspline_c
-  tinyspline_c_tests.cpp)
+  tinyspline_c_tests.cpp
+  ../src/debugging.h)
 TARGET_LINK_LIBRARIES(tinyspline_c
   gtest
-  gtest_main)
+  gtest_main
+  tinyspline)
 
 ## This is for running "make test" command
 ADD_TEST(NAME tinyspline_c COMMAND tinyspline_c)
