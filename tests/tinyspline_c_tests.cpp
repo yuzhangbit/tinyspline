@@ -10,6 +10,7 @@
 
 #include "gtest/gtest.h"
 #include <tinyspline.h>
+#include <tinysplinecpp.h>
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -22,7 +23,7 @@ TEST(TSplineTests, natural_cubic_spline) {
                       1, 5,
                       2, 10,
                       5, 12,
-                      8, 10,
+                      5.5, 10,
                       14, -10,
                       16, -12,
                       18, -10,
@@ -71,10 +72,39 @@ TEST(TSplineTests, natural_cubic_spline) {
     ctrlp = nullptr;
     knots = nullptr;
     ts_bspline_free(&spline);
+}
+
+TEST(TSplineTests, bspline) {
+    tinyspline::BSpline spline(9);
+    tsReal pts[18] = {0, 0,
+                      1, 5,
+                      2, 10,
+                      5, 12,
+                      8, 10,
+                      14, -10,
+                      16, -12,
+                      18, -10,
+                      22, 0};
+    std::vector<tinyspline::real> ctrlp = spline.controlPoints();
+    std::cout << "control points size:" << ctrlp.size() << std::endl;
+    for (std::size_t i = 0; i < ctrlp.size(); i++) {
+        ctrlp[i] = pts[i];
+    }
+    spline.setControlPoints(ctrlp);
+    std::vector<tinyspline::real> result;
     
+    std::ofstream myfile;
+    myfile.open ("bs_xy.csv");
+    std::size_t n_pts = 500;
+    myfile << "x" << ";" << "y" << std::endl;
+    for (std::size_t i = 0; i <= n_pts; i++) {
+        double u = i * 1.0 / n_pts;
+        result = spline.eval(u).result();
+        myfile << result[0] << ";" << result[1] << std::endl;
+    }
+    myfile.close();
     
-    //ts_bspline_print(&spline);
-    
+
 }
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
